@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+
+<h1>Hello!</h1>
+<center>
+    <img
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="todolist-tasklist"
+            height="200px"
+    />
+</center>
+<p>
+    Welcome to your Todo Master! <br />This website implements basic CRUD
+    Functionality, user authentication features and restful api using Flask
+</p>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+Flask==2.2.2
+Flask_Login==0.6.2
+Flask_RESTful==0.3.9
+Flask_SQLAlchemy
+SQLAlchemy
+Werkzeug==2.2.2

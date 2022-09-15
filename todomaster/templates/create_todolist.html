@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class="col-md-4 col-md-offset-4">
+  <form method="POST" action="/new">
+    <h2>Add New Todolist</h2>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <div class="notification is-danger">
+      {{ messages[0] }}
+    </div>
+    {% endif %} {% endwith %}
+    <div class="form-group">
+      <label for="theme">Theme</label>
+      <input
+        type="string"
+        class="form-control"
+        id="theme"
+        name="theme"
+        aria-describedby="themeHelp"
+        placeholder="Enter theme of your todolist"
+      />
+    </div>
+    <div class="form-group">
+      <label for="summary">Summary</label>
+      <input
+        type="text"
+        class="form-control"
+        id="summary"
+        name="summary"
+        aria-describedby="summaryHelp"
+        placeholder="some summary"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Todolist</button>
+  </form>
+</div>
+{% endblock %}
